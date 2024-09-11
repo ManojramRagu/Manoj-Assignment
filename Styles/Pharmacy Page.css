@@ -1,0 +1,113 @@
+body{
+    background-image: url(../Images/Pharmacy/Background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.booking_form_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    margin: 40px 0 100px 0;
+}
+
+.booking_form{
+    display: flex;
+    flex-direction: column;
+    background-color: #b7b7b932;
+    backdrop-filter: blur(200px);
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 50%;
+    margin: 30px;
+    border-radius: 50px;
+}
+
+.booking_form_content{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 30px;
+
+    input{
+        margin: 0 10px 0 10px;
+        border: none;
+    }
+}
+
+
+.input_name{
+    font-weight: bolder;
+    color: black;
+    font-size: 18px;
+}
+
+.text_input{
+    width: 45%;
+    height: 20px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 1px black);
+    background-color: antiquewhite;
+}
+
+.select_input{
+    transform: scale(1.5);
+    background-color: antiquewhite;
+}
+
+    .radio_container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+
+    .radio_sub_container{
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .check_container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+
+    .check_sub_container{
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+    }
+
+.area_input{
+    width: 55%;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 1px black);
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+.button_input{
+    font-weight: bolder;
+    color: black;
+    font-size: 15px;
+    width: 230px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    filter: drop-shadow(0 0 2px black);
+}
+
+.option_input{
+    width: 58%;
+    font-weight: bold;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}

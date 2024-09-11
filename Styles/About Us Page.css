@@ -1,0 +1,139 @@
+.hero{
+    width: 100%;
+    background-image: url(../Images/About/Hero\ Image.png);
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border-radius: 30px;
+    margin: 10px 10px 30px 10px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0);
+    text-shadow: 0 0 4px var(--primary-color)
+}
+
+.about_link_container{
+    display: grid;
+    grid-template-columns: repeat(2,500px);
+    grid-template-rows: repeat(2,150px);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 50px;
+}
+
+.about_links{
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 500px;
+    padding: 0px;
+    margin: 30px;
+    text-decoration: none;
+    gap: 10px;
+    transition: transform 0.4s ease;
+    transform: scale(0.8);
+
+    img{
+        height: 170px;
+        width: 170px;
+        filter: grayscale(100);
+        /* filter: drop-shadow(0 0 2px rgb(100, 100, 100)); */
+    }
+}
+.about_links:hover{
+    transform: scale(1);
+}
+#link_1{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#link_2{
+    grid-row: 1;
+    grid-column: 2;
+    flex-direction: row-reverse;       
+}
+
+#link_3{
+    grid-row: 2;
+    grid-column: 1;    
+}
+
+#link_4{
+    grid-row: 2;
+    grid-column: 2;
+    flex-direction: row-reverse;      
+}
+
+.about_table_container{
+    /* background-color: brown; */
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+
+    th, td {
+        padding: 22px;
+        border: 1px solid var(--primary-color);
+    }
+    th {
+        background-color: var(--primary-color);
+        color: #333;
+    }
+    thead th {
+        font-weight: bolder;
+        text-align: center;
+    }
+}
+
+@media (max-width: 668px){
+    .hero{
+        height: 35vh;
+        font-size: 40px;
+        justify-content: center;
+    }
+
+    .about_link_container{
+        grid-template-columns: repeat(2,300px);
+        grid-template-rows: repeat(2,150px);
+        gap: 20px
+    }
+
+    .about_links{
+        font-size: 10px;
+        padding: 0px;
+        margin: 10px;
+        gap: 25px;
+        justify-content: space-between;
+
+        img{
+            height: 120px;
+            width: 120px;
+        }
+
+        p{
+            padding: 30px;
+        }
+    }
+
+    #link_1 , #link_3{
+        flex-direction: row;
+    }
+}

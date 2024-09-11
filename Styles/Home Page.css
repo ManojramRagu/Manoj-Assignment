@@ -1,0 +1,127 @@
+ h1{
+    color: var(--head-color);
+}
+
+main section{
+    margin: 50px;
+    font-weight: bolder;
+
+    h1{
+        font-size: 35px;
+        margin-bottom: 20px;
+        color: var(--head-color);
+    }
+
+    p, li{
+        font-size: 19px;
+        margin-bottom: 30px;
+    }
+
+    li{
+        margin-left: 30px;
+    }
+}
+
+section{
+    margin: 15px;
+}
+
+
+.hero{
+    width: 100%;
+    background-image: url(../Images/Home/Hero\ Image.png);
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border-radius: 30px;
+    margin: 10px 10px 30px 10px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0);
+    text-shadow: 0 0 4px var(--primary-color)
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: justify;
+    margin: 20px;
+
+    img{
+        height: 250px;
+        width: 250px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 3px rgb(0, 0, 0);
+    }
+}
+
+.sub_content_1{
+    display: flex;
+    gap: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: large;
+}
+
+.sub_content_2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: left;
+    justify-content: center;
+}
+
+@media (max-width: 668px){
+    main section{
+        margin: 50px;
+        font-weight: bolder;
+    
+        h1{
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--head-color);
+        }
+    
+        p, li{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    
+        li{
+            margin-left: 15px;
+        }
+    }
+
+    .hero{
+        height: 35vh;
+        font-size: 40px;
+        justify-content: center;
+        margin: 0%;
+        border-radius: 0;
+    }
+
+    .content_mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sub_content_1{
+        flex-direction: column-reverse;
+    }
+
+    .sub_content_2{
+        flex-direction: column;
+    }
+}

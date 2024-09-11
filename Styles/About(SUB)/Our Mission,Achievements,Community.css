@@ -1,0 +1,41 @@
+main{
+    margin: 80px;
+    font-weight: bolder;
+}
+
+main h1{
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: var(--head-color);
+}
+
+main p, li{
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+main li{
+    margin-left: 30px;
+}
+
+.go_back{
+    display: flex;
+    width: 100vw;
+    margin-left: -80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.go_back_link{
+    text-decoration: none;
+    font-weight: bolder;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 30px;
+    transition: transform 0.2s ease;
+}
+
+.go_back_link:hover{
+    transform: scale(1.1);
+    color: #3ee2ff;
+}
