@@ -143,19 +143,19 @@
 
 @media (max-width: 380px){
     .about_link_container{
-        transform: scale(0.6);
+        transform: scale(0.62);
     }
 
     .about_table_container{
-        height: auto;
-        width: 100vw;
-        margin: 0;
+        height: 10%;
+        width: 100%;
+        margin: 0px;
     }
 
     .about_table{
-            transform: scale(0.6);
+            transform: scale(0.55);
             font-weight: bolder;
             width: 94.5vw;
-            margin: 0;
+            margin: 0px;
     }
 }
