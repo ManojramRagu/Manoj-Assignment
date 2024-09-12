@@ -101,3 +101,24 @@ body{
     background-color: var(--primary-color);
     filter: drop-shadow(0 0 2px black);
 }
+
+@media (max-width: 668px){
+    .booking_form_container{
+        margin: 0;
+        height: auto;
+        margin: 30px 0 30px 0;
+    }
+
+    .booking_form{
+        width: 65%;
+        margin: 30;
+        height: auto;
+    }
+
+    .input_name , div label{
+        font-size: 14px;
+    }
+    .select_input{
+        transform: scale(1);
+    }
+}
