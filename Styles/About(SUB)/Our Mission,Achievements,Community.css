@@ -39,3 +39,17 @@ main li{
     transform: scale(1.1);
     color: #3ee2ff;
 }
+
+@media (max-width: 380px){
+    main h1{
+        font-size: 23px;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    main p, body li{
+        font-size: 17px;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+}

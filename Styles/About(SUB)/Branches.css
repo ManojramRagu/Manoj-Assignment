@@ -76,3 +76,27 @@ main{
     transform: scale(1.1);
     color: #3ee2ff;
 }
+
+@media (max-width: 380px){
+    #our_branch_heading{
+        font-size: 30px;
+    }
+
+    .branch_heading{
+        font-size: 25px;
+    }
+
+    .branch_info{
+        flex-direction: column;
+        align-items: center;
+
+        p{
+            font-size: 14px;
+            margin: 15px;
+        }
+    }
+
+    .iframe_container{
+        margin: 0px;
+    }
+}
