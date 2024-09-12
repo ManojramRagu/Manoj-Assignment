@@ -255,7 +255,7 @@ footer a:hover{
     }
 }
 
-@media (max-width: 376px){
+@media (max-width: 380px){
     .list_container a{
         font-size: 18px;
     }

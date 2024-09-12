@@ -146,7 +146,7 @@ h1{
     }
 }
 
-@media (max-width: 376px){
+@media (max-width: 380px){
     main{
         font-size: 14px;
     }
