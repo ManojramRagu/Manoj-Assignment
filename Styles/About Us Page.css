@@ -148,7 +148,7 @@
 
     .about_table_container{
         height: auto;
-        width: auto;
+        width: 100vw;
     }
 
     .about_table{
