@@ -149,12 +149,13 @@
     .about_table_container{
         height: auto;
         width: 100vw;
+        margin: 0;
     }
 
     .about_table{
             transform: scale(0.6);
             font-weight: bolder;
             width: 94.5vw;
-            margin: 15px 0 15px 0;
+            margin: 0;
     }
 }
