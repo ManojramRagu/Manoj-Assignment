@@ -115,10 +115,63 @@ body{
         height: auto;
     }
 
+    .booking_form_content{
+        width: 100%;
+        margin: 20px;
+        gap: 5px;
+    }
+
     .input_name , div label{
         font-size: 14px;
     }
     .select_input{
         transform: scale(1);
+    }
+
+    .check_sub_container{
+        width: 55%;
+        font-weight: bolder;
+    }
+
+    .radio_sub_container{
+        font-weight: bolder;
+    }
+
+    .button_input{
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 380px){
+    .booking_form_content, .radio_container , .check_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text_input, .area_input{
+        width: 100%;
+    }
+
+    .radio_sub_container, .check_sub_container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        font-weight: bolder;
+    }
+
+    #buttons{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .input_name{
+        font-size: 16px;
+    }
+
+    .button_input{
+        font-size: 12px;
+        padding: 10px;
     }
 }
