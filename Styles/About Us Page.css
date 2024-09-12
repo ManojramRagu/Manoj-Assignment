@@ -140,3 +140,20 @@
         flex-direction: row;
     }
 }
+
+@media (max-width: 376px){
+    .about_link_container{
+        transform: scale(0.6);
+    }
+
+    .about_table_container{
+        height: auto;
+        width: auto;
+    }
+
+    .about_table{
+            transform: scale(0.6);
+            margin: auto;
+            font-weight: bolder;
+    }
+}
