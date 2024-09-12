@@ -170,8 +170,9 @@
 
     .career_link{
         padding: 0px;
-        font-size: 10px;
+        font-size: 18px;
         font-weight: bolder;
+        gap: 5px;
     }
 
     .career_intro{
@@ -190,7 +191,7 @@
     
         h1{
 
-            font-size: 20x;
+            font-size: 20px;
         }
     }
 }
