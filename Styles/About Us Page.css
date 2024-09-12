@@ -153,7 +153,6 @@
 
     .about_table{
             transform: scale(0.6);
-            margin: auto;
             font-weight: bolder;
     }
 }
