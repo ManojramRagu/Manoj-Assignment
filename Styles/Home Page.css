@@ -2,6 +2,7 @@
     color: var(--head-color);
 }
 
+/* Change font and styles of main section */
 main section{
     margin: 50px;
     font-weight: bolder;
@@ -26,7 +27,7 @@ section{
     margin: 15px;
 }
 
-
+/* Hero image section styling */
 .hero{
     width: 100%;
     background-image: url(../Images/Home/Hero\ Image.png);
@@ -48,6 +49,7 @@ section{
     }
 }
 
+/* Main content of Home page */
 .content{
     display: flex;
     flex-direction: column;
@@ -64,6 +66,7 @@ section{
     }
 }
 
+/* Section inside main Topics */
 .sub_content_1{
     display: flex;
     gap: 50px;
@@ -80,6 +83,7 @@ section{
     justify-content: center;
 }
 
+/* Media Queries */
 @media (max-width: 668px){
     main section{
         margin: 50px;

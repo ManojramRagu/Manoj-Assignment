@@ -1,3 +1,4 @@
+/* Default styling for content */
 main section{
     margin: 20px;
 }
@@ -8,6 +9,7 @@ main section{
     font-size: 40px;
 }
 
+/* Introduction section */
 .doctor_intro{
     font-size: 22px;
     margin: 20px 0 20px 20px;
@@ -22,6 +24,7 @@ main section{
     }
 }
 
+/* Container for doctor images */
 .doctor_container{
     display: grid;
     grid-template-columns: repeat(4, 300px);
@@ -36,6 +39,7 @@ main section{
     overflow: auto;
 }
 
+/* Styling for each doctor Image and name */
 .doctor{
     text-align: center;
     font-weight: bolder;
@@ -59,6 +63,7 @@ main section{
     }
 }
 
+/* Hover effect for doctors */
 .doctor:hover{
     p{
         transform: scale(1.1);
@@ -69,31 +74,8 @@ main section{
     }
 }
 
-.hover_doc_info{
-  p{
-      color: var(--head-color);
-      transition: transform 0.7s ease;
-  }
-
-  img{
-      margin-bottom: 10px;
-      border-radius: 20px;
-      filter: drop-shadow(0 0 4px grey);
-      transition: transform 0.7s ease;
-  }
-}
-.hover_doc_info:hover{
-  p{
-      transform: scale(1.1);
-      text-shadow: 0 0 1px var(--primary-color)
-  }
-  img{
-      transform: scale(1.1);
-  }
-}
-
 /* DOC INFO WHEN CLICKING */
-
+/* This content is hidden until relevan image is clicked */
 .doctor_content_container{
   display: none;
   flex-direction: column;
@@ -125,12 +107,14 @@ main section{
     }
 }
 
+/* Target used to activate container as a popup on click */
 .doctor_content_container:target{
   display: flex;
   transform: scale(1);
   opacity: 1;
 }
 
+/* Content inside container */
 .doctor_content{
   display: flex;
   flex-direction: column;
@@ -152,6 +136,7 @@ main section{
   }
 }
 
+/* Close button to close the hidden content which appears */
 .close_button {
   position: absolute;
   top: 10px;
@@ -161,6 +146,7 @@ main section{
   transition: transform 0.3s ease;
 }
 
+/* Close button effects */
 .close_button:hover{
   color: red;
   transform: scale(1.5);

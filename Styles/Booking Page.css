@@ -1,9 +1,12 @@
+/* Styling for body section Image */
 body{
     background-image: url(../Images/Booking/Background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* Container for booking form */
 .booking_form_container{
     display: flex;
     align-items: center;
@@ -14,6 +17,7 @@ body{
     margin: 40px;
 }
 
+/* Booking form styling */
 .booking_form{
     display: flex;
     flex-direction: column;
@@ -27,6 +31,7 @@ body{
     border-radius: 50px;
 }
 
+/* DIV sections inside booking form */
 .booking_form_content{
     display: flex;
     justify-content: space-between;
@@ -39,7 +44,7 @@ body{
     }
 }
 
-
+/* Individual input styling START */
 .input_name{
     font-weight: bolder;
     color: black;
@@ -101,7 +106,10 @@ body{
     background-color: var(--primary-color);
     filter: drop-shadow(0 0 2px black);
 }
+/* Individual input styling END */
 
+
+/* Media Queries */
 @media (max-width: 668px){
     .booking_form_container{
         margin: 0;

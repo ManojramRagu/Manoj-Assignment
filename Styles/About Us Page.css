@@ -1,3 +1,4 @@
+/* Hero image section styling */
 .hero{
     width: 100%;
     background-image: url(../Images/About/Hero\ Image.png);
@@ -19,6 +20,7 @@
     }
 }
 
+/* Button container for about page buttons which leads to subpages */
 .about_link_container{
     display: grid;
     grid-template-columns: repeat(2,500px);
@@ -29,6 +31,7 @@
     gap: 50px;
 }
 
+/* About page buttons */
 .about_links{
     display: flex;
     font-size: 25px;
@@ -49,12 +52,15 @@
         height: 170px;
         width: 170px;
         filter: grayscale(100);
-        /* filter: drop-shadow(0 0 2px rgb(100, 100, 100)); */
     }
 }
+
+/* Hover effects */
 .about_links:hover{
     transform: scale(0.9);
 }
+
+/* Grid allignment for buttons */
 #link_1{
     grid-row: 1;
     grid-column: 1;
@@ -77,8 +83,8 @@
     flex-direction: row-reverse;      
 }
 
+/* About page Table styling */
 .about_table_container{
-    /* background-color: brown; */
     width: 100vw;
     height: 500px;
     display: flex;
@@ -107,6 +113,7 @@
     }
 }
 
+/* Media queries */
 @media (max-width: 668px){
     .hero{
         height: 30vh;

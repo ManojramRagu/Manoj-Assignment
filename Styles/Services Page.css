@@ -1,3 +1,4 @@
+/* General styling for content in services page */
 main{
     font-size: 22px;
     font-weight: 600;
@@ -11,6 +12,7 @@ h1{
     color: var(--head-color);
 }
 
+/* Introduction styling */
 .services_info{
     display: flex;
     align-items: center;
@@ -26,6 +28,7 @@ h1{
     }
 }
 
+/* Container for images */
 .service_container{
     display: flex;
     align-items: center;
@@ -38,6 +41,7 @@ h1{
     filter: drop-shadow(0 0 4px grey);
 }
 
+/* Services inside container */
 .service{
     display: flex;
     flex-direction: column;
@@ -62,7 +66,7 @@ h1{
     }
 }
 
-
+/* Effects for services */
 .service:hover{
     p{
         opacity: 1;
@@ -73,17 +77,20 @@ h1{
     }
 }
 
+/* Heading styling */
 #service_heading{
     font-size: 40px;
     text-align: center;
     margin-bottom: 30px;
 }
 
+/* Service introduction container */
 .services_info_mobile{
     text-align: center;
     margin: 30px;
 }
 
+/* Container for all hidden content */
 .services_content{
     margin: 0 10px 40px 80px;
 
@@ -99,6 +106,7 @@ h1{
     }
 }
 
+/* Close button for service content */
 .exit_link{
     text-decoration: none;
     font-weight: bolder;
@@ -108,21 +116,25 @@ h1{
     border-radius: 8px;
 }
 
+/* Close button effect */
 .exit_link:hover{
     color: #3ee2ff;
 }
 
+/* Hidden content */
 .hidden_services_content{
     display: none;
     opacity: 0;
     transition: opacity 1s ease;
 }
 
+/* Target class to unhide hidden contetn on click */
 :target{
     display: block;
     opacity: 1;
 }
 
+/* Book an appoitment button */
 .booking_link_container{
     display: flex;
     width: 100vw;
@@ -145,6 +157,7 @@ h1{
     transform: scale(1.1);
 }
 
+/* Media Queries */
 @media (max-width: 668px){
     main{
         font-size: 18px;

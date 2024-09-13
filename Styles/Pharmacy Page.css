@@ -1,3 +1,4 @@
+/* Styling for body section Image */
 body{
     background-image: url(../Images/Pharmacy/Background.jpg);
     background-size: cover;
@@ -5,6 +6,7 @@ body{
     background-repeat: no-repeat;
 }
 
+/* Container for booking form */
 .booking_form_container{
     display: flex;
     align-items: center;
@@ -15,6 +17,7 @@ body{
     margin: 40px 0 100px 0;
 }
 
+/* Booking form styling */
 .booking_form{
     display: flex;
     flex-direction: column;
@@ -28,6 +31,7 @@ body{
     border-radius: 50px;
 }
 
+/* DIV sections inside booking form */
 .booking_form_content{
     display: flex;
     justify-content: space-between;
@@ -40,7 +44,7 @@ body{
     }
 }
 
-
+/* Individual input styling START */
 .input_name{
     font-weight: bolder;
     color: black;
@@ -111,7 +115,10 @@ body{
     background-color: antiquewhite;
     border-radius: 10px;
 }
+/* Individual input styling END */
 
+
+/* Media Queries */
 @media (max-width: 668px){
     .booking_form_container{
         margin: 0;
