@@ -1,3 +1,6 @@
+/* This style sheet is the default style sheet for all web pages. This includes styles for Header and Footer section as well */
+
+/* root to store main color scheme and font */
 :root {
     --primary-color: #00849b;
     --secondary-color: #b7b7b9;
@@ -13,6 +16,7 @@
     font-style: normal;
   }
 
+/* the "*" represents styles to be added to all elements */
 * {
     margin: 0;
     padding: 0;
@@ -25,8 +29,10 @@ html{
     background-color: #e7e7e7;
     scroll-behavior: smooth;
 }
-/* HEADER SECTION */
 
+/* HEADER SECTION  START*/
+
+/* Style to access links at header ie: About Us, Services */
 header a {
     text-decoration: none;
     font-weight: bolder;
@@ -35,14 +41,18 @@ header a {
     padding: 25px 20px 25px 20px;
 }
 
+/* Hovering on link makes it change color to whitesmoke */
 header a:hover{
     color: whitesmoke;
 }
 
+/* Sets nav label (☰) for hamburger menu to not appear on desktop view */
 header nav label{
     display: none;
 }
 
+/* Container for links for header */
+/* Background color is a linear gradient */
 .container{
     position: relative;
     display: flex;
@@ -53,16 +63,9 @@ header nav label{
     padding: 10px;
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    cursor: pointer;
-}
+/* Header links */
 
+/* Container for links */
 .list_container{
     display: flex;
     flex-wrap: wrap;
@@ -73,12 +76,14 @@ header nav label{
     font-size: 18px;
 }
 
+/* Clickable logo which leads to home page (Only desktop view) */
 .logo{
     height: 100px;
     width: 100px;
     filter: drop-shadow(0 0 4px black);
 }
 
+/* Hamburger menu which is hidden in desktop view */
 .hamburger{
     display: none;
 }
@@ -90,23 +95,43 @@ header nav label{
 #Home_link{
     display: none;
 }
+/* Hamburger menu end */
 
+/* id for logo which is linked to home page (Desktop view only) */
 #ham_logo{
     padding: 0 15px 0 15px;
 }
 
-/* FOOTER SECTION */
+/* Unknown class used before finalization */
+.links{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+}
+/* Unknown class end */
 
+/* HEADER SECTION  END*/
+
+/* FOOTER SECTION START*/
+
+/* Setting the links in the footer to no decoration */
 footer a{
     text-decoration: none;
     transition: 0.4s ease;
     padding: 0 10px 0 10px;
 }
 
+/* On hover links in footer change to whitemsoke and they also have a transition effect */
 footer a:hover{
     color: whitesmoke;
 }
 
+/* The container for all footer content */
+/* Background color is a linear gradient */
 .footer{
     text-align: center;
     position: relative;
@@ -123,18 +148,21 @@ footer a:hover{
     padding-bottom: 20px;
 }
 
+/* To access copyright and go back button div section */
 .copyright_and_go_back{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+/* Footer social links container */
 .footer_links{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+/* Footer social links */
 .footer_links div{
     display: flex;
     justify-content: space-between;
@@ -142,17 +170,22 @@ footer a:hover{
     gap: 10px;
 }
 
+/* Images for social links */
 .footer_logo{
     height: 20px;
     width: 20px;
 }
 
+/* All 3 sections in the footer */
 .footer div{
     margin-right: 50px;
 }
 
+/* FOOTER SECTION START*/
+
 /* MEADIA QUERIES */
 @media (max-width: 668px){
+    /* HEADER start */
     header nav label{
         display: block;
     }
@@ -191,6 +224,8 @@ footer a:hover{
     #Home_link{
         display: block;
     }
+
+    /* Display checkbox to none */
     #check{
         display: none;
     }
@@ -208,6 +243,7 @@ footer a:hover{
         color: var(--text-color);
     }
 
+    /* to display hamburger drop down menu */
     #check:checked ~ .list_container {
         height: 450px;
         padding: 10px;
@@ -221,7 +257,9 @@ footer a:hover{
             background-color: var(--primary-color);
         }
     }
+    /* HEADER end */
 
+    /* FOOTER start */
     .footer{
         display: flex;
         width: 100vw;
@@ -254,6 +292,7 @@ footer a:hover{
     .footer div{
         margin: 0 20px 0 20px;
     }
+    /* FOOTER end */
 }
 
 @media (max-width: 380px){
@@ -266,6 +305,7 @@ footer a:hover{
         height: 80px;
     }
 
+    /* Adjusting footer for mobile view */
     .footer{
         display: grid;
         grid-template-columns: repeat(1, 200px);
