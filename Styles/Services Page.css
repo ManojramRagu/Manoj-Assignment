@@ -123,6 +123,28 @@ h1{
     opacity: 1;
 }
 
+.booking_link_container{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking_link{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.booking_link:hover{
+    color: #3ee2ff;
+    transform: scale(1.1);
+}
+
 @media (max-width: 668px){
     main{
         font-size: 18px;
@@ -143,6 +165,10 @@ h1{
 
     .service_container{
         height: 100%;
+    }
+
+    .booking_link{
+        margin: 15px 0px;
     }
 }
 
@@ -194,6 +220,12 @@ h1{
         border-radius: 8px;
         margin-left: -40px;
         margin-right: 10px;
+    }
+
+    .booking_link{
+        font-size: 15px;
+        padding: 10px;
+        margin: 30px 0px;
     }
     
 }

@@ -20,17 +20,20 @@
 </head>
 <body>
 
-<!-- HEADER SECTION -->
+<!-- HEADER SECTION START-->
 
     <header>
         <nav class="container">
 
+            <!-- Below tags are for when the website enters mobile/tablet views where a Hamburger Menu will be deployed. By default hidden -->
             <img src="Images/Logo.png" alt="Logo for Lumen Care Hospital" class="logo hamburger">
             <h1 class="hamburger">Lumen Care</h1>              
 
+                <!-- Use of checkbox to initiate hamburger menu, Label has been acquired through google -->
             <input type="checkbox" id="check">
-            <label for="check">≡</label>
-            
+            <label for="check">☰</label>
+
+            <!-- Below content in a div section are for when the website is in Desktop view and is hidden inside a menu when in mobile/tablet view -->
             <div class="list_container">
                         <a href="index.html" target="_self" id="Home_link">Home Page</a>
                         <a href="About Us Page.html" target="_self">About Us</a>
@@ -46,19 +49,23 @@
 
         </nav>
     </header>
+<!-- HEADER SECTION END-->
 
-<!-- MAIN SECTION -->
+<!-- MAIN SECTION START -->
 
     <main>
+        <!-- Hero Image and text below -->
         <div class="hero">
             <p>LUMEN CARE</p>
         </div>
 
+        <!-- Introduction -->
         <section>
             <h1>Welcome to Lumen Care Hospital</h1>
             <p>At Lumen Care, we are dedicated to providing compassionate, comprehensive healthcare services to our community. Our state-of-the-art facility is equipped with the latest technology, and our team of experienced professionals is committed to delivering high-quality care. Whether you're here for a routine check-up or a complex procedure, you can trust Lumen Care to be your partner in health.</p>
         </section>
 
+        <!-- Content for home page start -->
         <section class="content_mobile">
             <h1>Our Services</h1>
             <div class="content">
@@ -114,18 +121,21 @@
                 </div>
             </div>
         </section>
-
+        <!-- Content for home page end -->
     </main>
+<!-- MAIN SECTION END -->
 
-<!-- FOOTER SECTION -->
+<!-- FOOTER SECTION START -->
 
     <footer class="footer">
 
+        <!-- Copyright section -->
         <div class="copyright_and_go_back" id="item1">
             <p>© 2024 Lumen Care | Privacy Policy | Terms of Service</p>
             <a href="#">Go Back</a>
         </div>
 
+        <!-- Address -->
         <div id="item2">
             <p>123/45, Main Street, Colombo 07, Sri Lanka</p>
             <p>Postal Code: 00700</p>
@@ -133,6 +143,7 @@
             <p><a href="mailto:lumencare@gmail.com">lumencare@gmail.com</a></p>
         </div>
 
+        <!-- Social Links -->
         <div class="footer_links" id="item3">
             <div> <img src="Images/LinkedIn Logo.png" alt="Logo For LinkedIn" class="footer_logo"> <a href="https://www.linkedin.com" target="_blank">   LinkedIn    </a>   </div>
             <div> <img src="Images/Facebook Logo.png" alt="Logo For Facebook" class="footer_logo"> <a href="https://www.facebook.com" target="_blank">  Facebook    </a>    </div>
@@ -140,6 +151,23 @@
             <div> <img src="Images/YouTube Logo.png" alt="Logo For YouYube" class="footer_logo"> <a href="https://www.youtube.com" target="_blank">    YouTube     </a>     </div>
         </div>
 
+        <!-- References:
+        1. Navoloka Hospital - Research and inspiration for hospital website structure and content.
+        2. Asiri Hospital - Reference for design, layout, and healthcare services presentation.
+        -->
+
+        <!-- Tools for Learning:
+        1. W3Schools - For learning HTML and CSS.
+        2. YouTube - For tutorials on web development techniques.
+        -->
+
+        <!-- Tools for Images:
+        1. Google - For sourcing general reference images.
+        2. Canva - For creating and editing images.
+        3. Adobe Firefly - For generating images.
+        -->
+
     </footer>
+<!-- FOOTER SECTION END -->
 </body>
 </html>

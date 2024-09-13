@@ -47,7 +47,7 @@ header nav label{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    /* width: 100vw; */
+    width: 100vw;
     height: 100px;
     background: linear-gradient(to right, var(--primary-color),#00badb, var(--primary-color));
     padding: 10px;
@@ -65,6 +65,7 @@ header nav label{
 
 .list_container{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
     justify-content: space-around;
@@ -112,7 +113,7 @@ footer a:hover{
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
-    height: 120px;
+    height: auto;
     background: linear-gradient(to right, var(--primary-color),#00badb, var(--primary-color));
     padding: 10px;
     align-items: center;
@@ -159,6 +160,8 @@ footer a:hover{
     .container{
         align-items: center;
         justify-content: space-evenly;
+        width: 100vw;
+        padding:10px 0px;
         gap: 5px;
     }
     .hamburger{
@@ -220,15 +223,13 @@ footer a:hover{
     }
 
     .footer{
-        display: grid;
-        gap: 10px;
-        grid-template-columns: repeat(3, 200px);
-        grid-template-rows: repeat(1, 200px);
-        width: 97vw;
-        height: 210px;
+        display: flex;
+        width: 100vw;
+        height: auto;
         align-items: center;
         justify-content: space-around;
         font-size: 14px;
+        padding:10px 0px;
     }
 
     #item1{
@@ -270,7 +271,8 @@ footer a:hover{
         grid-template-columns: repeat(1, 200px);
         grid-template-rows: repeat(3, 100px);
         height: auto;
-        width: 94.5vw;
+        width: 100vw;
+        gap: 10px;
 
         font-size: 12px;
     }
