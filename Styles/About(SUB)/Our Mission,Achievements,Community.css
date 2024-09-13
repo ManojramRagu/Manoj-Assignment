@@ -1,3 +1,4 @@
+/* Default styling for content */
 main{
     margin: 80px;
     font-weight: bolder;
@@ -18,6 +19,7 @@ main li{
     margin-left: 30px;
 }
 
+/* Return to about us button container */
 .go_back{
     display: flex;
     width: 100vw;
@@ -26,6 +28,7 @@ main li{
     align-items: center;
 }
 
+/* Return to about us button */
 .go_back_link{
     text-decoration: none;
     font-weight: bolder;
@@ -35,11 +38,13 @@ main li{
     transition: transform 0.2s ease;
 }
 
+/* Return to about us button hover animation*/
 .go_back_link:hover{
     transform: scale(1.1);
     color: #3ee2ff;
 }
 
+/* Media Queries */
 @media (max-width: 380px){
     main h1{
         font-size: 23px;

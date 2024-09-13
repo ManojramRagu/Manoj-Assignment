@@ -1,13 +1,17 @@
+/* Default styling for content */
 main{
     font-size: 18px;
 }
 
+/* Section for each branch */
 .align_content{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+/* Container for Map section */
 .iframe_container{
     align-items: center;
     margin: 30px 20px 120px 20px;
@@ -15,12 +19,14 @@ main{
     width: 90%;
     filter: drop-shadow(0 0 4px grey);
 
+    /* Adjusting iframe */
     iframe{
         width: 100%;
         border-radius: 25px;
     }
 }
 
+/* Container for image and following text */
 .branch_info{
     display: flex;
     align-items: center;
@@ -40,6 +46,7 @@ main{
     }
 }
 
+/* Heading for branch content */
 .branch_heading{
     font-size: 35px;
     text-align: center;
@@ -48,6 +55,7 @@ main{
     font-weight: bold;
 }
 
+/* Main heading */
 #our_branch_heading{
     font-size: 50px;
     font-weight: 900;
@@ -55,6 +63,7 @@ main{
     color: var(--head-color);
 }
 
+/* Return to about us button container */
 .go_back{
     display: grid;
     width: 100vw;
@@ -63,6 +72,7 @@ main{
     align-items: center;
 }
 
+/* Return to about us button */
 .go_back_link{
     text-decoration: none;
     font-weight: bolder;
@@ -72,11 +82,13 @@ main{
     transition: transform 0.2s ease;
 }
 
+/* Return to about us button hover animation*/
 .go_back_link:hover{
     transform: scale(1.1);
     color: #3ee2ff;
 }
 
+/* Media Queries */
 @media (max-width: 380px){
     #our_branch_heading{
         font-size: 30px;
