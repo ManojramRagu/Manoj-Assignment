@@ -33,9 +33,14 @@ function addToCart(product, quantity) {
 
     if (!itemExists) {
         const tableRow = document.createElement("tr");
+
+        // Table Columns
         const tableProductName = document.createElement("td");
         const tableProductQuantity = document.createElement("td");
         const tableProductPrice = document.createElement("td");
+        const tableButton =document.createElement("td");
+
+        // Delete Button
         const deleteIcon = document.createElement("img");
         const deleteButton = document.createElement("button");
 
@@ -45,16 +50,20 @@ function addToCart(product, quantity) {
 
         deleteButton.classList.add("remove_product");
         deleteButton.name = "Remove";
-        deleteButton.appendChild(deleteIcon);
+        // Appending Icon to Button
+        deleteButton.appendChild(deleteIcon);   
 
+        // Appending to table Columns
         tableProductName.innerText = product.name;
         tableProductQuantity.innerText = parseInt(quantity);
         tableProductPrice.innerText = parseInt(product.price) * parseInt(quantity);
+        tableButton.appendChild(deleteButton);
 
+        // Appending Columns to row
         tableRow.appendChild(tableProductName);
         tableRow.appendChild(tableProductQuantity);
         tableRow.appendChild(tableProductPrice);
-        tableRow.appendChild(deleteButton);
+        tableRow.appendChild(tableButton);
 
         tableData.appendChild(tableRow);
 

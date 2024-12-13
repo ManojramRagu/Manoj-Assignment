@@ -2,6 +2,7 @@
 .checkout_form {
     max-width: 600px;
     margin: 0 auto;
+    margin-bottom: 20px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -74,4 +75,8 @@
 /* Hover effect for the pay now button */
 .pay_now:hover {
     background-color: #218838;
+}
+
+table tr td:nth-child(4) {
+    display: none;
 }
