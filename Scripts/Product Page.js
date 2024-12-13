@@ -212,5 +212,4 @@ function checkout(){
         popErrorMessage("Cart is Empty")
     }
 }
-
 checkoutBtn.addEventListener("click", checkout)

@@ -75,11 +75,3 @@
 .pay_now:hover {
     background-color: #218838;
 }
-
-/* Optional: Add media query for smaller screens */
-@media (max-width: 600px) {
-    .checkout_card_details_container input {
-        width: 100%;
-        margin-right: 0;
-    }
-}
