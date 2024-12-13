@@ -1,0 +1,46 @@
+{
+    "Analgesics": [
+      { "name": "Paracetamol", "price": 50.0, "image": "Images/Pharmacy/Analgesics/Parcetamol.png" },
+      { "name": "Ibuprofen", "price": 60.0, "image": "Images/Pharmacy/Analgesics/Ibuprofen.png" },
+      { "name": "Aspirin", "price": 40.0, "image": "Images/Pharmacy/Analgesics/Aspirin.png" },
+      { "name": "Codeine", "price": 80.0, "image": "Images/Pharmacy/Analgesics/Codeine.png" },
+      { "name": "Diclofenac", "price": 70.0, "image": "Images/Pharmacy/Analgesics/Diclofenac.png" },
+      { "name": "Tramadol", "price": 90.0, "image": "Images/Pharmacy/Analgesics/Tramadol.png" }
+    ],
+    
+    "Antibiotics": [
+      { "name": "Amoxicillin", "price": 100.0, "image": "Images/Pharmacy/Antibiotics/Amoxicillin.png" },
+      { "name": "Ciprofloxacin", "price": 120.0, "image": "Images/Pharmacy/Antibiotics/Ciprofloxacin.png" },
+      { "name": "Doxycycline", "price": 90.0, "image": "Images/Pharmacy/Antibiotics/Doxycycline.png" },
+      { "name": "Clindamycin", "price": 110.0, "image": "Images/Pharmacy/Antibiotics/Clindamycin.png" },
+      { "name": "Azithromycin", "price": 130.0, "image": "Images/Pharmacy/Antibiotics/Azithromycin.png" },
+      { "name": "Metronidazole", "price": 95.0, "image": "Images/Pharmacy/Antibiotics/Metronidazole.png" }
+    ],
+
+    "Antidepressants": [
+      { "name": "Fluoxetine", "price": 200.0, "image": "Images/Pharmacy/Antidepressants/Fluoxetine.png" },
+      { "name": "Sertraline", "price": 220.0, "image": "Images/Pharmacy/Antidepressants/Sertraline.png" },
+      { "name": "Citalopram", "price": 210.0, "image": "Images/Pharmacy/Antidepressants/Citalopram.png" },
+      { "name": "Amitriptyline", "price": 180.0, "image": "Images/Pharmacy/Antidepressants/Amitriptyline.png" },
+      { "name": "Bupropion", "price": 230.0, "image": "Images/Pharmacy/Antidepressants/Bupropion.png" },
+      { "name": "Venlafaxine", "price": 240.0, "image": "Images/Pharmacy/Antidepressants/Venlafaxine.png" }
+    ],
+
+    "Antihistamines": [
+      { "name": "Diphenhydramine", "price": 40.0, "image": "Images/Pharmacy/Antihistamines/Diphenhydramine.png" },
+      { "name": "Cetirizine", "price": 45.0, "image": "Images/Pharmacy/Antihistamines/Cetirizine.png" },
+      { "name": "Loratadine", "price": 50.0, "image": "Images/Pharmacy/Antihistamines/Loratadine.png" },
+      { "name": "Fexofenadine", "price": 55.0, "image": "Images/Pharmacy/Antihistamines/Fexofenadine.png" },
+      { "name": "Levocetirizine", "price": 60.0, "image": "Images/Pharmacy/Antihistamines/Levocetirizine.png" },
+      { "name": "Desloratadine", "price": 65.0, "image": "Images/Pharmacy/Antihistamines/Desloratadine.png" }
+    ],
+
+    "Antihypertensives": [
+      { "name": "Lisinopril", "price": 70.0, "image": "Images/Pharmacy/Antihypertensives/Lisinopril.png" },
+      { "name": "Amlodipine", "price": 75.0, "image": "Images/Pharmacy/Antihypertensives/Amlodipine.png" },
+      { "name": "Losartan", "price": 80.0, "image": "Images/Pharmacy/Antihypertensives/Losartan.png" },
+      { "name": "Enalapril", "price": 85.0, "image": "Images/Pharmacy/Antihypertensives/Enalapril.png" },
+      { "name": "Ramipril", "price": 90.0, "image": "Images/Pharmacy/Antihypertensives/Ramipril.png" },
+      { "name": "Verapamil", "price": 95.0, "image": "Images/Pharmacy/Antihypertensives/Verapamil.png" }
+    ]
+  }  

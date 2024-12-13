@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="Styles/Default.css">
     <link rel="stylesheet" href="Styles/Pharmacy Page.css">
 
+    <script src="Scripts/Product Page.js" defer></script>
+
 </head>
 <body>
 
@@ -54,81 +56,51 @@
 <!-- MAIN SECTION START -->
 
 <main>
-    <!-- Form container for background -->
-    <div class="booking_form_container">
+    <div class="product_container" id="product_container">
 
-        <!-- div sections inside form each represent a section of label and input ie: name: [       ] -->
-        <form action="" method="post" class="booking_form">
+        <!-- <h1 class="product_category">Category Name</h1>
+        <div class="category_products_container">
 
-            <div class="booking_form_content">
-                <label for="name" class="input_name">Medicine Name:</label>
-                <input type="text" id="name" name="name" class="text_input" required>
-            </div>
-        
-            <div class="booking_form_content">
-                <label for="contact" class="input_name">Quantity:</label>
-                <input type="text" id="contact" name="contact" class="text_input" required>
-            </div>
-
-            <div class="booking_form_content">
-                <div class="check_container">
-                    <label class="input_name">Billing:</label>
-
-                    <div class="check_sub_container">
-                        <div>
-                            <input type="checkbox" id="diabetes" name="existing_conditions" value="diabetes" class="select_input">
-                            <label for="diabetes">Online Receipt</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="hypertension" name="existing_conditions" value="hypertension" class="select_input">
-                            <label for="hypertension">Paper Receipt</label>
-                        </div>
-                    </div>
+            <div class="product_card">
+                <img src="Images/Products/1.png" alt="product name" name="product name" class="product_image">
+                <p class="product_name">Product Name</p>
+                <div class="product_cost">
+                    <p class="product_cost_value">Value</p>
+                    <p class="product_cost_currency">Rs</p>
                 </div>
-            </div>
-        
-            <div class="booking_form_content">    
-                <div class="radio_container">
-                    <label class="input_name">Delivery Method:</label>
-
-                    <div class="radio_sub_container">
-                        <div>
-                            <input type="radio" id="in_person" name="appointment_type" value="in_person" class="select_input">
-                            <label for="in_person">Home Delivery</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="virtual" name="appointment_type" value="virtual" class="select_input">
-                            <label for="virtual">Store Pick-Up</label>
-                        </div>
-                    </div>
-                </div>
+                <input type="number" min="0" max="100" value="0" class="product_quantity">
+                <button class="add_to_cart_button">Add to Cart</button>
             </div>
 
-            <div class="booking_form_content">
-                <label class="input_name">Payment Method:</label>
+        </div> -->
 
-                    <select name="payment_method" class="option_input" required>
-                    <option value="" disabled selected>Select a payment method</option>
-                    <option value="credit_card">Credit Card</option>
-                    <option value="debit_card">Debit Card</option>
-                    <option value="paypal">PayPal</option>
-                    <option value="cash_on_delivery">Cash on Delivery</option>
-                    </select>
-            </div>
-        
-            <div class="booking_form_content">
-                <label for="reasons" class="input_name">Delivery Address:</label><br>
-                <textarea id="reasons" name="reasons" rows="4" cols="50"  class="area_input"></textarea>
-            </div>
-        
-            <div class="booking_form_content" id="buttons">
-                <input type="reset" value="Clear Form"  class="button_input">
-                <input type="submit" value="Proceed To Checkout" class="button_input">
-            </div>
-    
-        </form>
     </div>
-    <!-- Form container ends -->
+
+    <div class="product_table_container">
+
+        <table class="cart_table" id="cart_table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th colspan="2">Price</th>
+                </tr>
+            </thead>
+    
+            <tbody class="cart_body" id="cart_body"></tbody>
+    
+            <tfoot class="cart_total" id="cart_total">
+                <tr>
+                    <th colspan="2">Total</th>
+                    <th id="total_cost" colspan="2"></th>
+                </tr>
+            </tfoot>
+    
+        </table>
+    </div>
+
+    <div id="errorMessage"></div>
+
 </main>
 
 <!-- MAIN SECTION END -->

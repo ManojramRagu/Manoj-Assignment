@@ -1,200 +1,292 @@
-/* Styling for body section Image */
-body{
-    background-image: url(../Images/Pharmacy/Background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* General Container Styling */
+.product_container {
+    width: auto;
+    margin: 20px auto;
+    padding: 15px;  /* Reduced padding */
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Container for booking form */
-.booking_form_container{
+.product_category {
+    text-align: center;
+    font-size: 1.8em;  /* Reduced font size */
+    color: #333;
+    margin-bottom: 15px;  /* Reduced margin */
+}
+
+/* Category Product Container */
+.category_products_container {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    width: 100vw;
-    height: 100vh;
-    margin: 40px 0 100px 0;
+    gap: 15px;  /* Reduced gap */
+    justify-content: center;
 }
 
-/* Booking form styling */
-.booking_form{
-    display: flex;
-    flex-direction: column;
-    background-color: #b7b7b932;
-    backdrop-filter: blur(200px);
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
-    width: 50%;
-    padding: 30px 50px;
-    border-radius: 50px;
+/* Product Card Styling */
+.product_card {
+    width: 220px;  /* Reduced width */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 12px;  /* Reduced padding */
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-/* DIV sections inside booking form */
-.booking_form_content{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 30px;
-
-    input{
-        margin: 0 10px 0 10px;
-        border: none;
-    }
+.product_card:hover {
+    transform: translateY(-5px);
 }
 
-/* Individual input styling START */
-.input_name{
-    font-weight: bolder;
-    color: black;
-    font-size: 18px;
+/* Product Image */
+.product_image {
+    width: 100%;
+    height: 140px;  /* Fixed height */
+    border-radius: 8px;
+    object-fit: cover;
 }
 
-.text_input{
-    width: 45%;
-    height: 20px;
-    border-radius: 10px;
-    filter: drop-shadow(0 0 1px black);
-    background-color: antiquewhite;
-}
-
-.select_input{
-    transform: scale(1.5);
-    background-color: antiquewhite;
-}
-
-    .radio_container{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        font-weight: bold;
-    }
-
-    .radio_sub_container{
-        display: flex;
-        width: 60%;
-        justify-content: space-between;
-    }
-
-    .check_container{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        font-weight: bold;
-    }
-
-    .check_sub_container{
-        display: flex;
-        width: 60%;
-        justify-content: space-between;
-    }
-
-.area_input{
-    width: 55%;
-    border-radius: 10px;
-    filter: drop-shadow(0 0 1px black);
-    padding: 10px;
-    background-color: antiquewhite;
-}
-
-.button_input{
-    font-weight: bolder;
-    color: black;
-    font-size: 15px;
-    width: 230px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: var(--primary-color);
-    filter: drop-shadow(0 0 2px black);
-}
-
-.option_input{
-    width: 58%;
+/* Product Name */
+.product_name {
+    font-size: 1.1em;  /* Reduced font size */
     font-weight: bold;
-    background-color: antiquewhite;
-    border-radius: 10px;
-}
-/* Individual input styling END */
-
-
-/* Media Queries */
-@media (max-width: 668px){
-    .booking_form_container{
-        margin: 0;
-        height: auto;
-        margin: 30px 0 30px 0;
-    }
-
-    .booking_form{
-        width: 65%;
-        margin: 30;
-        height: auto;
-    }
-
-    .booking_form_content{
-        width: 100%;
-        margin: 20px;
-        gap: 5px;
-    }
-
-    .input_name , div label{
-        font-size: 14px;
-    }
-    .select_input{
-        transform: scale(1);
-    }
-
-    .check_sub_container{
-        width: 65%;
-        font-weight: bolder;
-    }
-
-    .radio_sub_container{
-        font-weight: bolder;
-        width: 65%;
-    }
-
-    .button_input{
-        margin: 0 20px;
-    }
+    color: #333;
+    margin-top: 8px;  /* Reduced margin */
 }
 
-@media (max-width: 380px){
-    .booking_form_content, .radio_container , .check_container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+/* Product Cost */
+.product_cost {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 8px;  /* Reduced margin */
+}
 
-    .text_input, .area_input{
-        width: 100%;
-    }
+.product_cost_value {
+    font-size: 1.3em;  /* Reduced font size */
+    font-weight: bold;
+    color: #00b894;
+}
 
-    .radio_sub_container, .check_sub_container{
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-        font-weight: bolder;
-    }
+.product_cost_currency {
+    font-size: 1.1em;  /* Reduced font size */
+    color: #333;
+    margin-left: 5px;
+}
 
-    #buttons{
-        display: flex;
-        flex-direction: row;
-    }
+/* Product Quantity Input */
+.product_quantity {
+    width: 50px;  /* Reduced width */
+    height: 25px;  /* Reduced height */
+    margin-top: 12px;  /* Reduced margin */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 1em;
+}
 
-    .input_name{
-        font-size: 16px;
-    }
+.product_quantity:invalid {
+    border-color: red;
+}
 
-    .button_input{
-        font-size: 12px;
-        padding: 10px;
-    }
+/* Add to Cart Button */
+.add_to_cart_button {
+    width: 100%;
+    padding: 8px;  /* Reduced padding */
+    margin-top: 12px;  /* Reduced margin */
+    background-color: #00b894;
+    color: white;
+    font-size: 1em;  /* Reduced font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    .option_input{
-        width: 100%;
-        text-align: center;
-    }
+.add_to_cart_button:hover {
+    background-color: #009e7a;
+}
+
+.add_to_cart_button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+/* Table */
+
+/* Container for the cart table */
+.product_table_container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Allows horizontal scrolling if table is too wide */
+}
+
+/* Styling for the cart table */
+.cart_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Table header styling */
+.cart_table thead {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: left;
+}
+
+.cart_table th {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Table body styling */
+/* Table Row Styling */
+.cart_table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+/* Styling for product name, quantity, and price */
+.cart_table td:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.cart_table td:nth-child(2), .cart_table td:nth-child(3) {
+    text-align: center;
+}
+
+.cart_table td:nth-child(4) {
+    text-align: center;
+    padding: 8px;
+}
+
+/* Hover Effect for Rows */
+.cart_body tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Remove Button Styling */
+.remove_product {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    color: #ff4d4d;
+    transition: color 0.3s ease;
+}
+
+/* Delete Icon Inside Button */
+.remove_product .delete_icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Hover Effect on Remove Button */
+.remove_product:hover {
+    color: #d9534f;
+}
+
+/* Add to Cart Button Inside Row */
+.add_to_cart_button {
+    background-color: #00b894;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.add_to_cart_button:hover {
+    background-color: #009e7a;
+}
+
+/* Total Cost Styling */
+#total_cost {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    padding: 15px 0;
+    background-color: #f4f4f4;
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+}
+
+/* Table Row Content */
+.cart_table td {
+    color: #555;
+    font-size: 1em;
+}
+
+/* Delete Icon */
+.delete_icon {
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.3s ease;
+}
+
+/* Display product price with proper formatting */
+.cart_table td:nth-child(3) {
+    font-weight: bold;
+    color: #00b894;
+}
+
+/* Product Quantity Input Field Inside Cart */
+.product_quantity {
+    width: 40px;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Disabled Add to Cart Button */
+.add_to_cart_button:disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+/* Adjusting Table Header */
+.cart_table th {
+    padding: 12px;
+    font-size: 1.1em;
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: left;
+}
+
+/* Styling for Empty Table Rows */
+.cart_body tr {
+    transition: background-color 0.3s ease;
+}
+
+.cart_body tr:empty {
+    display: none;
+}
+
+#errorMessage{
+    display:none;
+    position: fixed;
+    font-weight: bolder;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
