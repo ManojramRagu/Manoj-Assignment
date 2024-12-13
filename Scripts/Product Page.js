@@ -208,6 +208,8 @@ let checkoutBtn = document.getElementById("checkout");
 let applyFavoriteBtn = document.getElementById("applyFavorite");
 let addToFavoriteBtn = document.getElementById("addToFavorite");
 
+checkoutBtn.addEventListener("click", checkout)
+
 // Checkout Page
 
 function storeTableData(){
@@ -225,4 +227,19 @@ function checkout(){
     }
 }
 
-checkoutBtn.addEventListener("click", checkout)
+function addToFavorites(){
+    const fav = tableData.innerHTML;
+    localStorage.setItem("favorite", JSON.stringify(fav));
+
+    tableData.innerHTML = "";
+}
+
+function applyFavorites(){
+    const getFav = JSON.parse(localStorage.getItem("favorite"));
+    if (getFav) {
+        tableData.innerHTML = getFav;
+    }
+}
+
+addToFavoriteBtn.addEventListener("click",addToFavorites);
+applyFavoriteBtn.addEventListener("click",applyFavorites);
