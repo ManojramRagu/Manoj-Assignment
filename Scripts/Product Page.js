@@ -60,9 +60,10 @@ function addToCart(product, quantity) {
         cost.innerText = `${total} Rs`;
 
         function removeItem() {
-            tableRow.remove();
-            total -= parseInt(product.price) * parseInt(quantity);
+            const currentPrice = parseInt(tableProductPrice.innerText);
+            total -= currentPrice;
             cost.innerText = `${total} Rs`;
+            tableRow.remove();
         }
 
         deleteButton.addEventListener("click", removeItem);
