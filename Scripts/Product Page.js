@@ -200,16 +200,20 @@ let applyFavoriteBtn = document.getElementById("applyFavorite");
 let addToFavoriteBtn = document.getElementById("addToFavorite");
 
 // Checkout Page
-let checkoutTable = document.getElementById("checkout_table_container");
-let entireProductTable = document.getElementById("cart_table");
+
+function storeTableData(){
+    const tableContent = document.getElementById("product_table_container").innerHTML;
+    localStorage.setItem("tableContent", JSON.stringify(tableContent));
+}
 
 function checkout(){
     if(tableData.innerHTML !== ""){
         window.location.href = "Checkout Page.html";
-        checkoutTable.appendChild(entireProductTable);
+        storeTableData()
     }
     else{
         popErrorMessage("Cart is Empty")
     }
 }
+
 checkoutBtn.addEventListener("click", checkout)

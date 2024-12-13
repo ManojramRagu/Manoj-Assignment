@@ -1,5 +1,6 @@
 let paymentMethod = document.getElementById("paymentMethod");
 let cardDetails = document.getElementById("cardDetails");
+let newTable = document.getElementById('checkout_table_container')
 
 function displayCardInfo(){
     if(paymentMethod.value === "card"){
@@ -10,6 +11,13 @@ function displayCardInfo(){
     }
 }
 
-paymentMethod.addEventListener("change", displayCardInfo);
+function getTableData(){
+    const storedTableContent = JSON.parse(localStorage.getItem('tableContent'));
+    if (storedTableContent) {
+        newTable.innerHTML = storedTableContent;
+    }
+}
 
-window.addEventListener("DOMContentLoaded", displayCardInfo);
+displayCardInfo()
+getTableData()
+paymentMethod.addEventListener("change", displayCardInfo);

@@ -319,9 +319,12 @@
 }
 
 .star_button {
-    background: none;
+    background-color: var(--primary-color);
+    background-image: url('../Images/Pharmacy/Star\ Unfilled.png');
+    background-size: cover;
     border: none;
-    padding: 10px;
+    border-radius: 100%;
+    padding: 23px;
     cursor: pointer;
     transition: transform 0.5s ease;
     display: flex;
@@ -330,7 +333,8 @@
 }
 
 .star_button:hover {
-    transform: scale(1.2);
+    background-image: url('../Images/Pharmacy/Star\ Filled.png');
+    transform: scale(1.1);
 }
 
 #star-icon {
