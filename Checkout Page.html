@@ -15,9 +15,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="Styles/Default.css">
-    <link rel="stylesheet" href="Styles/Pharmacy Page.css">
+    <link rel="stylesheet" href="Styles/Checkout Page.css">
 
-    <script src="Scripts/Product Page.js" defer></script>
+    <script src="Scripts/Checkout Page.js" defer></script>
 
 </head>
 <body>
@@ -56,61 +56,59 @@
 <!-- MAIN SECTION START -->
 
 <main>
-    <div class="product_container" id="product_container">
 
-        <!-- <h1 class="product_category">Category Name</h1>
-        <div class="category_products_container">
+    <div class="checkout_table_container" id="checkout_table_container"></div>
 
-            <div class="product_card">
-                <img src="Images/Products/1.png" alt="product name" name="product name" class="product_image">
-                <p class="product_name">Product Name</p>
-                <div class="product_cost">
-                    <p class="product_cost_value">Value</p>
-                    <p class="product_cost_currency">Rs</p>
-                </div>
-                <input type="number" min="0" max="100" value="0" class="product_quantity">
-                <button class="add_to_cart_button">Add to Cart</button>
+    <form class="checkout_form">
+        <div class="checkout_name_input">           
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+        </div>
+        
+        <div class="checkout_address_input">           
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br>
+        </div>
+        
+        <div class="checkout_contact_input">
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required><br>
+        </div>
+      
+        <div class="checkout_payment_input">
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="cash">Cash on Delivery</option>
+                <option value="card">Debit/Credit Card</option>
+            </select><br>
+        </div>
+      
+        <div class="checkout_card_details_container" id="cardDetails">
+
+            <div class="checkout_card_details_number">                
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9101 1121"><br>
+            </div>
+            
+            <div class="checkout_card_details_name">                
+                <label for="cardName">Name on Card:</label>
+                <input type="text" id="cardName" name="cardName" required><br>
             </div>
 
-        </div> -->
+            <div class="checkout_card_details_expiry">                
+                <label for="expiry">Expiry:</label>
+                <input type="month" id="expiry" name="expiry" required><br>
+            </div>
+      
+            <div class="checkout_card_details_cvv">                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" maxlength="3" required><br>
+            </div>     
 
-    </div>
-
-    <div class="product_table_container">
-
-        <table class="cart_table" id="cart_table">
-            <thead>
-                <tr>
-                    <th>Product Name</th>
-                    <th>Quantity</th>
-                    <th colspan="2">Price</th>
-                </tr>
-            </thead>
-    
-            <tbody class="cart_body" id="cart_body"></tbody>
-    
-            <tfoot class="cart_total" id="cart_total">
-                <tr>
-                    <th colspan="2">Total</th>
-                    <th id="total_cost" colspan="2"></th>
-                </tr>
-            </tfoot>
-    
-        </table>
-    </div>
-
-    <div id="errorMessage"></div>
-
-    <div id="buttonContainer" class="product_button_container">
-
-        <button id="applyFavorite" class="product_button">Apply Favorite</button>
-        
-        <button id="checkout" class="product_button">Checkout</button>
-        
-        <button id="addToFavorite" class="star_button">
-            <img id="star-icon" src="Images/Pharmacy/Star Unfilled.png" alt="Star Icon" />
-        </button>
-    </div>
+        </div>
+      
+        <button class="pay_now" id="payNow">Pay Now</button>
+      </form>
 
 </main>
 

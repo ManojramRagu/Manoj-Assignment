@@ -1,0 +1,85 @@
+/* General styling for the checkout form */
+.checkout_form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the form sections, combining label and input/select styles */
+.checkout_form label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.checkout_form input,
+.checkout_form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Focus effect for inputs and select */
+.checkout_form input:focus,
+.checkout_form select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Hide card details by default */
+.checkout_card_details_container {
+    /* display: none; */
+    margin-top: 20px;
+}
+
+/* Card details inputs */
+.checkout_card_details_container input {
+    width: 48%;
+    margin-right: 4%;
+}
+
+.checkout_card_details_container input:last-child {
+    margin-right: 0;
+}
+
+/* Payment method dropdown */
+.checkout_payment_input select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Styling the pay now button */
+.pay_now {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the pay now button */
+.pay_now:hover {
+    background-color: #218838;
+}
+
+/* Optional: Add media query for smaller screens */
+@media (max-width: 600px) {
+    .checkout_card_details_container input {
+        width: 100%;
+        margin-right: 0;
+    }
+}

@@ -1,3 +1,5 @@
+displayProductCards()
+
 // Add and Remove to cart functions
 
 let tableData = document.getElementById("cart_body");
@@ -75,7 +77,7 @@ function popErrorMessage(message) {
         errorMessage.innerText = message;
         errorMessage.style.display = "block";
         setTimeout(() => errorMessage.style.display = "none", 3000);
-    }
+}
 
 // Generating Cards
 
@@ -189,4 +191,26 @@ async function displayProductCards() {
     }
 }
 
-displayProductCards()
+
+// CHECKOUT PAGE JS
+
+// Buttons
+let checkoutBtn = document.getElementById("checkout");
+let applyFavoriteBtn = document.getElementById("applyFavorite");
+let addToFavoriteBtn = document.getElementById("addToFavorite");
+
+// Checkout Page
+let checkoutTable = document.getElementById("checkout_table_container");
+let entireProductTable = document.getElementById("cart_table");
+
+function checkout(){
+    if(tableData.innerHTML !== ""){
+        window.location.href = "Checkout Page.html";
+        checkoutTable.appendChild(entireProductTable);
+    }
+    else{
+        popErrorMessage("Cart is Empty")
+    }
+}
+
+checkoutBtn.addEventListener("click", checkout)
