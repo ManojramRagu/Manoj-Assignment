@@ -21,3 +21,11 @@ function getTableData(){
 displayCardInfo()
 getTableData()
 paymentMethod.addEventListener("change", displayCardInfo);
+
+// Validation for inputs
+function popErrorMessage(message) {
+    const errorMessage = document.getElementById("errorMessage");
+    errorMessage.innerText = message;
+    errorMessage.style.display = "block";
+    setTimeout(() => errorMessage.style.display = "none", 3000);
+}

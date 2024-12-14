@@ -82,10 +82,17 @@ function addToCart(product, quantity) {
 }
 
 function popErrorMessage(message) {
-        const errorMessage = document.getElementById("errorMessage");
-        errorMessage.innerText = message;
-        errorMessage.style.display = "block";
-        setTimeout(() => errorMessage.style.display = "none", 3000);
+    const errorMessage = document.getElementById("errorMessage");
+    errorMessage.innerText = message;
+    errorMessage.style.display = "block";
+    setTimeout(() => errorMessage.style.display = "none", 3000);
+}
+
+function popSuccessMessage(message){
+    const successMessage = document.getElementById("successMessage");
+    successMessage.innerText = message;
+    successMessage.style.display = "block";
+    setTimeout(() => successMessage.style.display = "none", 3000);
 }
 
 // Generating Cards
@@ -154,9 +161,9 @@ async function displayProductCards() {
 
             const productQuantity = document.createElement("input");
             productQuantity.type = "number";
-            productQuantity.min = 1;
+            productQuantity.min = 0;
             productQuantity.max = 100;
-            productQuantity.value = 1;
+            productQuantity.value = 0;
             productQuantity.name = "quantity";
             productQuantity.classList.add("product_quantity");
 
@@ -171,10 +178,11 @@ async function displayProductCards() {
 
                 if (quantityValue >= 1 && quantityValue <= 100) {
                     addToCart(product, quantityValue);
-                    productQuantity.value = 1;
+                    productQuantity.value = 0;
+                    popSuccessMessage("Added to cart")
                 } else {
                     popErrorMessage("Please enter a value between 1-100")
-                    productQuantity.value = 1;
+                    productQuantity.value = 0;
                 }
             });
 
@@ -229,10 +237,17 @@ function checkout(){
 
 // Saving to local Storage
 function addToFavorites(){
-    const fav = tableData.innerHTML;
-    localStorage.setItem("favorite", JSON.stringify(fav));
-    const costOfFav = cost.innerText
-    localStorage.setItem("favoriteCost", JSON.stringify(costOfFav));
+
+    if(tableData.rows.length > 0){
+        const fav = tableData.innerHTML;
+        localStorage.setItem("favorite", JSON.stringify(fav));
+        const costOfFav = cost.innerText
+        localStorage.setItem("favoriteCost", JSON.stringify(costOfFav));
+        popSuccessMessage("Added to Favorites")
+    }
+    else{
+        popErrorMessage("Cannot save empty cart")
+    }
 }
 
 // Functions to Reassign delete button to row
@@ -272,6 +287,8 @@ function applyFavorites() {
         const productQuantityCell = tableRow.getElementsByTagName("td")[1];
         assignRemoveFunctions(button, tableRow, productPriceCell, productQuantityCell);
     });
+
+    popSuccessMessage("Applied Favorite")
 }
 
 // Event listeners

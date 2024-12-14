@@ -113,22 +113,6 @@
     cursor: not-allowed;
 }
 
-#errorMessage {
-    display: none;
-    position: fixed;
-    font-weight: bolder;
-    top: 120px; /* Position the error message 20px from the top */
-    left: 50%;
-    transform: translateX(-50%); /* Horizontally center the message */
-    background-color: red;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 9999; /* Ensure it stays on top of other elements */
-    filter: drop-shadow(0 0 3px grey);
-}
-
-
 .product_button_container {
     display: flex;
     width: 100%;

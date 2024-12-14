@@ -404,3 +404,33 @@ footer a:hover{
     color: #333;
     border-top: 2px solid #ddd;
 }
+
+#errorMessage {
+    display: none;
+    position: fixed;
+    font-weight: bolder;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    filter: drop-shadow(0 0 3px grey);
+}
+
+#successMessage {
+    display: none;
+    position: fixed;
+    font-weight: bolder;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    filter: drop-shadow(0 0 3px grey);
+}
