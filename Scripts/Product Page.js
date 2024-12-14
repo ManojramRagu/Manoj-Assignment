@@ -224,22 +224,56 @@ function checkout(){
     }
     else{
         popErrorMessage("Cart is Empty")
-    }
+    }   
 }
 
+// Saving to local Storage
 function addToFavorites(){
     const fav = tableData.innerHTML;
     localStorage.setItem("favorite", JSON.stringify(fav));
-
-    tableData.innerHTML = "";
+    const costOfFav = cost.innerText
+    localStorage.setItem("favoriteCost", JSON.stringify(costOfFav));
 }
 
-function applyFavorites(){
+// Functions to Reassign delete button to row
+function removeCartItem(tableRow, productPriceCell, productQuantityCell) {
+    const unitPrice = parseInt(productPriceCell.innerText) / parseInt(productQuantityCell.innerText);
+    const quantity = parseInt(productQuantityCell.innerText);
+    const itemTotalPrice = unitPrice * quantity;
+
+    const currentTotal = parseInt(cost.innerText);
+    const newTotal = currentTotal - itemTotalPrice;
+    cost.innerText = `${newTotal} Rs`;
+
+    tableRow.remove();
+}
+
+function assignRemoveFunctions(button, tableRow, productPriceCell, productQuantityCell) {
+    button.addEventListener("click", () => removeCartItem(tableRow, productPriceCell, productQuantityCell));
+}
+
+// Applying Favorites
+function applyFavorites() {
     const getFav = JSON.parse(localStorage.getItem("favorite"));
     if (getFav) {
         tableData.innerHTML = getFav;
     }
+
+    const getFavCost = JSON.parse(localStorage.getItem("favoriteCost"));
+    if (getFavCost) {
+        cost.innerText = getFavCost;
+        total = parseInt(cost.innerText);
+    }
+
+    const removeButtons = document.getElementsByName("Remove");
+    removeButtons.forEach(button => {
+        const tableRow = button.closest("tr");
+        const productPriceCell = tableRow.getElementsByTagName("td")[2];
+        const productQuantityCell = tableRow.getElementsByTagName("td")[1];
+        assignRemoveFunctions(button, tableRow, productPriceCell, productQuantityCell);
+    });
 }
 
+// Event listeners
 addToFavoriteBtn.addEventListener("click",addToFavorites);
 applyFavoriteBtn.addEventListener("click",applyFavorites);
