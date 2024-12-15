@@ -233,7 +233,6 @@ footer a:hover{
     .links a{
         display: block;
         text-align: center;
-        transform: 0.3s ease;
         cursor: pointer;
     }
 
@@ -249,13 +248,12 @@ footer a:hover{
         padding: 10px;
         background-color: #0296b0;
         z-index: 1000;
-
-        a{
-            width: 100%;
-            padding: 10px;
-            text-align: center;
-            background-color: var(--primary-color);
-        }
+    }
+    #check:checked ~ .list_container a{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        background-color: var(--primary-color);
     }
     /* HEADER end */
 
