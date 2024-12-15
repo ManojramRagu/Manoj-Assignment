@@ -75,6 +75,7 @@ function addToCart(product, quantity) {
             total -= currentPrice;
             cost.innerText = `${total} Rs`;
             tableRow.remove();
+            popErrorMessage("Item has been removed successfully")
         }
 
         deleteButton.addEventListener("click", removeItem);
@@ -261,6 +262,7 @@ function removeCartItem(tableRow, productPriceCell, productQuantityCell) {
     cost.innerText = `${newTotal} Rs`;
 
     tableRow.remove();
+    popErrorMessage("Item has been removed successfully")
 }
 
 function assignRemoveFunctions(button, tableRow, productPriceCell, productQuantityCell) {
