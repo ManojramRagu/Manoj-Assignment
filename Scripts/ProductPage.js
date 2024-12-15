@@ -228,7 +228,7 @@ function storeTableData(){
 
 function checkout(){
     if(tableData.innerHTML !== ""){
-        window.location.href = "Checkout Page.html";
+        window.location.href = "CheckoutPage.html";
         storeTableData()
     }
     else{

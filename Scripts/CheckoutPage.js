@@ -163,7 +163,7 @@ function validateAllFunctions() {
 
 function showSuccessMessage() {
     alert("Thank you for your purchase")
-    window.location.href = "Pharmacy Page.html";
+    window.location.href = "PharmacyPage.html";
 }
 
 // Attach event listeners to form inputs
