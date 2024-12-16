@@ -272,25 +272,39 @@ function assignRemoveFunctions(button, tableRow, productPriceCell, productQuanti
 // Applying Favorites
 function applyFavorites() {
     const getFav = JSON.parse(localStorage.getItem("favorite"));
-    if (getFav) {
-        tableData.innerHTML = getFav;
-    }
-
     const getFavCost = JSON.parse(localStorage.getItem("favoriteCost"));
-    if (getFavCost) {
-        cost.innerText = getFavCost;
-        total = parseInt(cost.innerText);
+
+    if (!getFav || !getFavCost) {
+        popErrorMessage("No favorites found in local storage.");
+    }
+    else{
+
+        if (getFav) {
+            tableData.innerHTML = getFav;
+        }
+  
+        if (getFavCost) {
+            cost.innerText = getFavCost;
+        }
+        total = 0;
+        const rows = tableData.getElementsByTagName("tr");
+        for (let row of rows) {
+            const productPriceCell = row.getElementsByTagName("td")[2];
+            total += parseInt(productPriceCell.innerText);
+        }
+        cost.innerText = `${total} Rs`;
+    
+        const removeButtons = document.getElementsByName("Remove");
+        removeButtons.forEach(button => {
+            const tableRow = button.closest("tr");
+            const productPriceCell = tableRow.getElementsByTagName("td")[2];
+            const productQuantityCell = tableRow.getElementsByTagName("td")[1];
+            assignRemoveFunctions(button, tableRow, productPriceCell, productQuantityCell);
+        });
+    
+        popSuccessMessage("Applied Favorite")
     }
 
-    const removeButtons = document.getElementsByName("Remove");
-    removeButtons.forEach(button => {
-        const tableRow = button.closest("tr");
-        const productPriceCell = tableRow.getElementsByTagName("td")[2];
-        const productQuantityCell = tableRow.getElementsByTagName("td")[1];
-        assignRemoveFunctions(button, tableRow, productPriceCell, productQuantityCell);
-    });
-
-    popSuccessMessage("Applied Favorite")
 }
 
 // Event listeners
