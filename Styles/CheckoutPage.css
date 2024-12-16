@@ -42,10 +42,6 @@
     margin-right: 4%;
 }
 
-.checkout_card_details_container input:last-child {
-    margin-right: 0;
-}
-
 .checkout_payment_input select {
     padding: 10px;
     font-size: 16px;
@@ -77,4 +73,40 @@ table tr td:nth-child(4) {
     font-size: 16px;
     font-weight: bolder;
 
+}
+
+@media (max-width: 390px) {
+    .checkout_form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .checkout_form label {
+        font-size: 14px;
+    }
+
+    .checkout_form input,
+    .checkout_form select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .checkout_card_details_container input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .checkout_payment_input select {
+        font-size: 14px;
+    }
+
+    .pay_now {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .error_para {
+        font-size: 14px;
+    }
 }
