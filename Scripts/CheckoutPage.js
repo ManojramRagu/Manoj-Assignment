@@ -162,7 +162,7 @@ function validateAllFunctions() {
 
 
 function showSuccessMessage() {
-    alert("Thank you for your purchase")
+    alert("THANK YOU FOR YOUR PURCHASE!")
     window.location.href = "PharmacyPage.html";
 }
 
